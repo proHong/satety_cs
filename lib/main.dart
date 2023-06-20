@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:safety_cs/presentation/Home.dart';
 import 'package:safety_cs/presentation/Login.dart';
+import 'package:safety_cs/presentation/NotAuthHome.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,6 +20,6 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue.shade200),
           useMaterial3: true,
         ),
-        home: const LoginPage());
+        home: const NotAuthHome());
   }
 }
