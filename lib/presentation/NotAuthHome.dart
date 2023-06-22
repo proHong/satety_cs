@@ -75,10 +75,6 @@ class NotAuthHomeState extends State<NotAuthHome> {
                 child: currentIdx == 0 ? LoginPage() : RegisterPage()),
           ),
           SocialLoginCard(index: currentIdx),
-          Text(
-            currentIdx.toString(),
-            style: TextStyle(fontSize: 100),
-          ),
         ],
       ),
     );
@@ -92,9 +88,7 @@ class SocialLoginCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedOpacity(
-      opacity: index == 0 ? 1.0 : 0.0,
-      duration: Duration(milliseconds: 250),
+    return Container(
       child: Container(
         alignment: Alignment.bottomCenter,
         padding: EdgeInsets.fromLTRB(50, 0, 50, 50),
