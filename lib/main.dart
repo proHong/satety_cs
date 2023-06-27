@@ -48,9 +48,10 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
         title: 'Safety_CS',
         theme: ThemeData(
-          primarySwatch: Colors.blue,
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue.shade200),
-          useMaterial3: true,
+          appBarTheme: AppBarTheme(
+            backgroundColor: Colors.white,
+            titleTextStyle: TextStyle(color: Colors.blue),
+          ),
         ),
         home: user == null ? NotAuthHome() : HomePage());
   }

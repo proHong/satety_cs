@@ -89,28 +89,26 @@ class SocialLoginCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      alignment: Alignment.bottomCenter,
+      padding: EdgeInsets.fromLTRB(50, 0, 50, 50),
       child: Container(
-        alignment: Alignment.bottomCenter,
-        padding: EdgeInsets.fromLTRB(50, 0, 50, 50),
-        child: Container(
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.all(
-                Radius.circular(10),
-              ),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.grey.withOpacity(0.3),
-                  blurRadius: 5.0,
-                  spreadRadius: 0.0,
-                  offset: const Offset(0, 3),
-                )
-              ]),
-          padding: EdgeInsets.all(10.0),
-          height: 70,
-          child: Text("소셜 로그인 $index"),
-        ),
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.all(
+              Radius.circular(10),
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.3),
+                blurRadius: 5.0,
+                spreadRadius: 0.0,
+                offset: const Offset(0, 3),
+              )
+            ]),
+        padding: EdgeInsets.all(10.0),
+        height: 70,
+        child: Text("소셜 로그인 $index"),
       ),
     );
   }

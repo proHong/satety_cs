@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:safety_cs/widgets/TheCard.dart';
 
 class Board extends StatefulWidget {
   const Board({super.key});
@@ -10,8 +11,6 @@ class Board extends StatefulWidget {
 class _BoardState extends State<Board> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text("Board"),
-    );
+    return TheCard(top: Text("Hello"), bottom: Text("Bottom"));
   }
 }

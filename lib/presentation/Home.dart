@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:convex_bottom_bar/convex_bottom_bar.dart';
+
 import 'package:safety_cs/presentation/Board.dart';
 import 'package:safety_cs/presentation/ChatRoomList.dart';
 import 'package:safety_cs/presentation/EducationRecord.dart';
@@ -16,28 +16,20 @@ class _HomePageState extends State<HomePage> {
   int currentIdx = 0;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: IndexedStack(
-        children: [
-          EducationRecord(),
-          Board(),
-          ChatRoomList(),
-          Setting(),
-        ],
-        index: currentIdx,
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        appBarTheme: AppBarTheme(
+          elevation: 0,
+          backgroundColor: Colors.white,
+        ),
+        iconTheme: IconThemeData(
+          color: Colors.black,
+        ),
+        primaryColor: Colors.black,
       ),
-      bottomNavigationBar: ConvexAppBar(
-        items: [
-          TabItem(icon: Icons.home, title: 'EducationRecord'),
-          TabItem(icon: Icons.map, title: 'Discovery'),
-          TabItem(icon: Icons.message, title: 'Message'),
-          TabItem(icon: Icons.people, title: 'Profile'),
-        ],
-        onTap: (index) {
-          this.setState(() {
-            currentIdx = index;
-          });
-        },
+      home: Scaffold(
+        body: EducationRecord(),
       ),
     );
   }
